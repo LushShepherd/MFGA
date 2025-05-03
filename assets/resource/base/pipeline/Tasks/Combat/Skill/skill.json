@@ -1,0 +1,324 @@
+{
+    "Skill": {
+        "doc": "input",
+        "recognition": "TemplateMatch",
+        "template": "Combat/Skill/NextPhase.png",
+        "roi": [
+            1070,
+            567,
+            126,
+            79
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "AssistantServant": {
+        "next": [
+            "Order",
+            "IbukiDōjiBerserker",
+            "ArtoriaCasterBerserker",
+            "OtherServant"
+        ]
+    },
+    "NPFull": {
+        "doc": "end",
+        "recognition": "OCR",
+        "expected": "(1(\\.)?[0-9](\\.)?[0-9]|2(\\.)?[0-9](\\.)?[0-9]|30(\\.)?0)",
+        "roi": [
+            863,
+            655,
+            43,
+            23
+        ],
+        "next": [
+            "NextPhase"
+        ]
+    },
+    "NextPhase": {
+        "doc": "NextPhase",
+        "recognition": "TemplateMatch",
+        "template": "Combat/Skill/NextPhase.png",
+        "roi": [
+            1070,
+            567,
+            126,
+            79
+        ],
+        "action": "Click"
+    },
+    "IbukiDōjiBerserker": {
+        "recognition": "OCR",
+        "expected": "伊吹童子",
+        "next": [
+            "SkillTarget",
+            "Skill1-3",
+            "Skill3-1",
+            "Skill3-2",
+            "NPFull",
+            "Skill3-3",
+            "Skill1-2",
+            "Skill1-1",
+            "Skill2-3",
+            "Skill2-1",
+            "Skill2-2",
+            "NextPhase",
+            "Exit"
+        ]
+    },
+    "ArtoriaCasterBerserker": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Skill/ArtoriaCasterBerserker.png",
+        "roi": [
+            801,
+            695,
+            95,
+            21
+        ],
+        "next": [
+            "SkillTarget",
+            "Skill1-3",
+            "NPFull",
+            "Skill3-3",
+            "Skill1-1",
+            "Skill3-1",
+            "Skill3-2",
+            "Skill2-3",
+            "Skill2-1",
+            "Skill1-2",
+            "Skill2-2",
+            "NextPhase",
+            "Exit"
+        ]
+    },
+    "OtherServant": {
+        "next": [
+            "NPFull",
+            "SkillTarget",
+            "Skill1-1",
+            "Skill1-2",
+            "Skill1-3",
+            "NextPhase",
+            "Exit"
+        ]
+    },
+    "SkillTarget": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Skill/SkillTarget.png",
+        "green_mask": true,
+        "roi": [
+            571,
+            178,
+            145,
+            31
+        ],
+        "action": "Click",
+        "target": [
+            880,
+            347,
+            147,
+            93
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill1-1": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            85,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            68,
+            578,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill1-2": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            175,
+            590,
+            25,
+            30
+        ],
+        "action": "Click",
+        "target": [
+            158,
+            582,
+            3,
+            3
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill1-3": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            265,
+            590,
+            20,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            232,
+            573,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill2-1": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            405,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            393,
+            580,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill2-2": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            495,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            467,
+            574,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill2-3": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            580,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            553,
+            574,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill3-1": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            720,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            709,
+            581,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill3-2": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            810,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            799,
+            579,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    },
+    "Skill3-3": {
+        "doc": "使用技能",
+        "recognition": "OCR",
+        "roi": [
+            900,
+            590,
+            25,
+            30
+        ],
+        "inverse": true,
+        "expected": "[0-9]",
+        "action": "Click",
+        "target": [
+            881,
+            580,
+            3,
+            3
+        ],
+        "next": [
+            "AssistantServant"
+        ]
+    }
+}

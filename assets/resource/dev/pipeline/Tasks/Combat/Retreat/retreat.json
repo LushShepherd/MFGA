@@ -1,0 +1,43 @@
+{
+    "Retreat": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Retreat/Continue.png",
+        "next": [
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton",
+            "BackButton",
+            "Confirmation",
+            "GiveUp",
+            "Continue"
+        ]
+    },
+    "Continue": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Retreat/Continue.png",
+        "action": "Click"
+    },
+    "GiveUp": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Retreat/GiveUp.png",
+        "roi": [
+            842,
+            323,
+            78,
+            92
+        ],
+        "action": "Click"
+    },
+    "Confirmation": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Retreat/Confirmation.png",
+        "roi": [
+            601,
+            543,
+            78,
+            39
+        ],
+        "action": "Click"
+    }
+}

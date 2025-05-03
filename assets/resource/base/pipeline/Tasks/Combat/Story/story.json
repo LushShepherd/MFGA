@@ -1,0 +1,53 @@
+{
+    "Story": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "roi": [
+            1123,
+            0,
+            157,
+            73
+        ],
+        "next": [
+            "StoryOption",
+            "Skip",
+            "Exit"
+        ],
+        "interrupt": [],
+        "on_error": []
+    },
+    "StoryOption": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Story/StoryOption.png",
+        "roi": [
+            150,
+            160,
+            982,
+            226
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": []
+    },
+    "Skip": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "roi": [
+            1123,
+            0,
+            157,
+            73
+        ],
+        "action": "Click",
+        "next": [
+            "Yes",
+            "Exit"
+        ]
+    },
+    "Yes": {
+        "recognition": "OCR",
+        "expected": "是",
+        "index": -1,
+        "action": "Click"
+    }
+}

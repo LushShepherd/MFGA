@@ -1,0 +1,6 @@
+{
+    "CloseFGO": {
+        "action": "StopApp",
+        "package": "com.bilibili.fatego"
+    }
+}
