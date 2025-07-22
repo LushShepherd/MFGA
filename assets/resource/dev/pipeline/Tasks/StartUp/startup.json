@@ -74,10 +74,21 @@
             0
         ],
         "next": [
-            "Combat"
+            "ReturnMain"
         ]
     },
     "HomeFlagCloseReturnMain": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/HomeFlag.png",
+        "roi": [
+            668,
+            95,
+            526,
+            514
+        ],
+        "next": []
+    },
+    "HomeFlagCloseReturnMain_old": {
         "recognition": "TemplateMatch",
         "template": "StartUp/HomeFlag.png",
         "roi": [
@@ -292,7 +303,19 @@
             35,
             38
         ],
-        "post_wait_freezes": 300
+        "action": "Click"
+    },
+    "ApplicationNotResponding": {
+        "doc": "应用程序没有响应",
+        "recognition": "TemplateMatch",
+        "template": "StartUp/ApplicationNotResponding.png",
+        "roi": [
+            309,
+            370,
+            240,
+            44
+        ],
+        "action": "Click"
     },
     "StartFGO": {
         "doc": "0",
