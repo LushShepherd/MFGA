@@ -99,12 +99,11 @@
     "GrandSummoa_old": {
         "recognition": "TemplateMatch",
         "template": "GrandSummoa/GrandSummoa.png",
-        "green_mask": true,
         "roi": [
-            601,
-            550,
-            78,
-            109
+            598,
+            575,
+            83,
+            50
         ],
         "action": "Click"
     },
@@ -112,10 +111,10 @@
         "recognition": "TemplateMatch",
         "template": "GrandSummoa/GrandSummoa.png",
         "roi": [
-            601,
-            550,
-            78,
-            109
+            598,
+            575,
+            83,
+            50
         ],
         "action": "Click",
         "next": [
@@ -125,8 +124,10 @@
         "interrupt": [
             "FreeSummoa",
             "FriendshipSummoa",
-            "GrandSummoa",
-            "Menu",
+            "GrandSummoa"
+        ],
+        "timeout": 6000,
+        "on_error": [
             "ReturnMain"
         ]
     },

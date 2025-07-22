@@ -1,16 +1,9 @@
 {
     "Friendship": {
         "next": [
-            "ConfirmSummoa",
-            "SummoaResult"
-        ],
-        "interrupt": [
-            "FreeSummoa",
-            "FriendshipSummoa",
             "GrandSummoa"
         ],
-        "timeout": 6000,
-        "on_error": [
+        "interrupt": [
             "Menu",
             "ReturnMain"
         ]
@@ -21,7 +14,10 @@
         "action": "Click",
         "target": "SummoaResult",
         "next": [
-            "Friendship"
+            "SummoaResult"
+        ],
+        "on_error": [
+            "ReturnMain"
         ]
     },
     "SummoaResult": {
@@ -100,17 +96,40 @@
         ],
         "action": "Click"
     },
+    "GrandSummoa_old": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/GrandSummoa.png",
+        "roi": [
+            598,
+            575,
+            83,
+            50
+        ],
+        "action": "Click"
+    },
     "GrandSummoa": {
         "recognition": "TemplateMatch",
         "template": "GrandSummoa/GrandSummoa.png",
-        "green_mask": true,
         "roi": [
-            601,
-            550,
-            78,
-            109
+            598,
+            575,
+            83,
+            50
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "ConfirmSummoa",
+            "SummoaResult"
+        ],
+        "interrupt": [
+            "FreeSummoa",
+            "FriendshipSummoa",
+            "GrandSummoa"
+        ],
+        "timeout": 6000,
+        "on_error": [
+            "ReturnMain"
+        ]
     },
     "Menu": {
         "recognition": "TemplateMatch",
@@ -121,9 +140,6 @@
             84,
             37
         ],
-        "action": "Click",
-        "next": [
-            "Friendship"
-        ]
+        "action": "Click"
     }
 }
