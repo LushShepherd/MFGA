@@ -10,15 +10,18 @@
             "HomeButton",
             "BackButton",
             "CloseAnnouncement",
-            "Reward",
+            "LoginReward",
             "GameLaunch",
             "Abort",
             "Disclaimer",
             "DataUpdate",
             "Servant",
+            "RetryConnection",
             "Connecting",
             "GameLoading",
             "FGOLogo",
+            "AndroidNotification",
+            "GameNotification",
             "StartFGO"
         ]
     },
@@ -54,7 +57,7 @@
             "HomeButton",
             "BackButton",
             "CloseAnnouncement",
-            "Reward",
+            "LoginReward",
             "NextStep",
             "Story"
         ],
@@ -106,13 +109,28 @@
             "HomeButton",
             "BackButton",
             "CloseAnnouncement",
-            "Reward"
+            "LoginReward",
+            "GameNotification"
         ]
     },
-    "Reward": {
-        "doc": "-1",
-        "recognition": "OCR",
-        "expected": "关闭",
+    "GameNotification": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/GameNotification.png"
+        ],
+        "roi": [
+            950,
+            210,
+            25,
+            26
+        ],
+        "action": "Click"
+    },
+    "LoginReward": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/LoginReward.png"
+        ],
         "action": "Click"
     },
     "HomeButton": {
@@ -165,6 +183,18 @@
             532,
             205,
             49
+        ],
+        "action": "Click"
+    },
+    "RetryConnection": {
+        "doc": "7",
+        "recognition": "TemplateMatch",
+        "template": "StartUp/RetryConnection.png",
+        "roi": [
+            799,
+            543,
+            80,
+            41
         ],
         "action": "Click"
     },
@@ -249,6 +279,18 @@
             240,
             239,
             239
+        ],
+        "post_wait_freezes": 300
+    },
+    "AndroidNotification": {
+        "doc": "申请android通知权限",
+        "recognition": "TemplateMatch",
+        "template": "StartUp/AndroidNotification.png",
+        "roi": [
+            768,
+            172,
+            35,
+            38
         ],
         "post_wait_freezes": 300
     },

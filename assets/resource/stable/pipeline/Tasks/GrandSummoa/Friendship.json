@@ -16,6 +16,7 @@
         ]
     },
     "AnotherSummoa": {
+        "doc": "免费十连后继续（默认禁用）",
         "enabled": false,
         "action": "Click",
         "target": "SummoaResult",
