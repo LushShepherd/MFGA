@@ -1,0 +1,115 @@
+{
+    "Bronze": {
+        "next": [
+            "Shop"
+        ],
+        "interrupt": [
+            "Menu",
+            "ReturnMain"
+        ],
+        "on_error": []
+    },
+    "Shop": {
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/Shop.png",
+        "roi": [
+            770,
+            562,
+            78,
+            62
+        ],
+        "action": "Click",
+        "next": [
+            "APEmpty"
+        ],
+        "interrupt": [
+            "ConfirmClose",
+            "ExchangeFruit",
+            "BronzeFruit",
+            "BronzeSapling",
+            "InShop"
+        ],
+        "on_error": [
+            "ReturnMain"
+        ]
+    },
+    "APEmpty": {
+        "doc": "行动力不足",
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/APEmpty.png",
+        "roi": [
+            550,
+            439,
+            170,
+            48
+        ],
+        "action": "Click",
+        "target": [
+            465,
+            523,
+            1,
+            1
+        ],
+        "next": [
+            "APEmpty",
+            "ReturnMain"
+        ]
+    },
+    "BronzeSapling": {
+        "doc": "兑换青铜树苗",
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/BronzeSapling.png",
+        "roi": [
+            865,
+            90,
+            296,
+            515
+        ],
+        "action": "Click"
+    },
+    "BronzeFruit": {
+        "doc": "青铜果实",
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/BronzeFruit.png",
+        "roi": [
+            730,
+            123,
+            294,
+            91
+        ],
+        "action": "Click"
+    },
+    "ExchangeFruit": {
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/ExchangeFruit.png",
+        "action": "Click"
+    },
+    "ConfirmClose": {
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/ConfirmClose.png",
+        "roi": [
+            602,
+            539,
+            76,
+            43
+        ],
+        "action": "Click"
+    },
+    "InShop": {
+        "recognition": "TemplateMatch",
+        "template": "BronzeSapling/InShop.png",
+        "roi": [
+            951,
+            0,
+            329,
+            85
+        ],
+        "action": "Click",
+        "target": [
+            1254,
+            284,
+            1,
+            1
+        ]
+    }
+}

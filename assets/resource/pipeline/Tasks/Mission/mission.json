@@ -1,0 +1,19 @@
+{
+    "Mission": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/HomeFlag.png",
+        "roi": [
+            724,
+            326,
+            221,
+            53
+        ],
+        "next": [],
+        "interrupt": [
+            "Menu"
+        ],
+        "on_error": [
+            "ReturnMain"
+        ]
+    }
+}

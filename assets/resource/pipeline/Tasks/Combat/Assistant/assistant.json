@@ -1,0 +1,129 @@
+{
+    "AssistantFormation": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Formation/AssistantFormation.png",
+        "roi": [
+            1028,
+            0,
+            252,
+            84
+        ],
+        "timeout": 5000,
+        "next": [
+            "Berserker"
+        ],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "Berserker": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Formation/Berserker.png",
+        "roi": [
+            529,
+            92,
+            73,
+            73
+        ],
+        "action": "Click",
+        "next": [
+            "FormationFlag",
+            "Assistant",
+            "ScrollbarBottom",
+            "NoScrollbar"
+        ],
+        "interrupt": [],
+        "timeout": 3000,
+        "on_error": [
+            "SwipeUp"
+        ]
+    },
+    "Assistant": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Formation/IbukiDōjiBerserker.png"
+        ],
+        "roi": [
+            47,
+            170,
+            166,
+            542
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [],
+        "timeout": 2000
+    },
+    "ScrollbarBottom": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Formation/ScrollbarBottom.png"
+        ],
+        "roi": [
+            1237,
+            168,
+            38,
+            547
+        ],
+        "action": "Click",
+        "target": [
+            1257,
+            102,
+            0,
+            0
+        ],
+        "next": [
+            "GuestServant"
+        ]
+    },
+    "NoScrollbar": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Formation/NoScrollbar.png"
+        ],
+        "roi": [
+            1237,
+            168,
+            38,
+            547
+        ],
+        "next": [
+            "GuestServant"
+        ]
+    },
+    "GuestServant": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Formation/GuestServant.png"
+        ],
+        "roi": [
+            247,
+            170,
+            138,
+            542
+        ],
+        "timeout": 5000,
+        "action": "Click",
+        "next": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "SwipeUp": {
+        "action": "Swipe",
+        "begin": [
+            1000,
+            416,
+            5,
+            5
+        ],
+        "end": [
+            1037,
+            214,
+            5,
+            5
+        ],
+        "duration": 1024,
+        "next": []
+    }
+}

@@ -1,40 +1,46 @@
 {
+    "name": "MFGA",
+    "version": "v0.0.1",
+    "url": "https://github.com/LushShepherd/MFGA",
+    "custom_title": "MFGA",
     "controller": [
         {
             "name": "安卓端",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio"
-            }
         }
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "B 服",
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
-            ]
         }
     ],
-    "agent": {
-        "child_exec": "python",
-        "child_args": [
-            "{PROJECT_DIR}/agent/main.py"
-        ]
-    },
     "task": [
+        {
+            "name": "启动游戏",
+            "entry": "StartUp"
+        },
+        {
+            "name": "友情池抽卡",
+            "entry": "Friendship",
+            "option": [
+                "任务选项1"
+            ]
+        },
+        {
+            "name": "合成青铜果实",
+            "entry": "Bronze"
+        },
+        {
+            "name": "主线推图",
+            "entry": "Combat"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "CloseFGO"
+        },
         {
             "name": "普通任务",
             "entry": "MyTask1"
@@ -63,18 +69,17 @@
         "任务选项1": {
             "cases": [
                 {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
+                    "name": "免费十连",
+                    "pipeline_override": {}
                 },
                 {
-                    "name": "文本2",
+                    "name": "抽完友情点",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
+                        "AnotherSummoa": {
+                            "enabled": true
+                        },
+                        "UnfreeSummoa": {
+                            "enabled": true
                         }
                     }
                 }

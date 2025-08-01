@@ -1,0 +1,147 @@
+{
+    "Combat": {
+        "next": [
+            "Servant"
+        ],
+        "interrupt": [
+            "Skill",
+            "Order",
+            "Result",
+            "NextStep",
+            "AssistantFormation",
+            "FormationFlag",
+            "Retreat",
+            "EnterTheSection",
+            "EnterTheChapter",
+            "EnterTheStage",
+            "Story",
+            "Tips"
+        ],
+        "timeout": 60000,
+        "on_error": [
+            "ReturnMain"
+        ]
+    },
+    "Result": {
+        "doc": "-1",
+        "recognition": "OCR",
+        "expected": [
+            "关闭",
+            "请点击游戏界面",
+            "点击屏幕"
+        ],
+        "roi": [
+            0,
+            360,
+            1280,
+            360
+        ],
+        "action": "Click"
+    },
+    "NextStep": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/NextStep.png"
+        ],
+        "roi": [
+            1047,
+            615,
+            125,
+            53
+        ],
+        "action": "Click"
+    },
+    "EnterTheChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Next3.png",
+        "green_mask": true,
+        "roi": [
+            708,
+            91,
+            447,
+            629
+        ],
+        "target_offset": [
+            0,
+            60,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next_doc": "Set in code.",
+        "next": [],
+        "interrupt": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "EnterTheStage": {
+        "recognition": "TemplateMatch",
+        "count": 12,
+        "template": "Combat/Next.png",
+        "green_mask": true,
+        "roi": [
+            0,
+            0,
+            1280,
+            600
+        ],
+        "threshold": 0.4,
+        "target_offset": [
+            0,
+            120,
+            0,
+            20
+        ],
+        "action": "Click",
+        "next_doc": "Set in code.",
+        "next": [],
+        "interrupt": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "EnterTheSection": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/NextSession.png",
+        "green_mask": true,
+        "roi": [
+            645,
+            95,
+            108,
+            76
+        ],
+        "action": "Click",
+        "next_doc": "Set in code.",
+        "next": [
+            "ConfirmSection"
+        ],
+        "timeout": 2000,
+        "interrupt": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "ConfirmSection": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "action": "Click",
+        "order_by": "Horizontal",
+        "index": -1,
+        "next_doc": "Set in code.",
+        "next": [],
+        "interrupt": []
+    },
+    "Tips": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Tips.png",
+        "roi": [
+            565,
+            173,
+            0,
+            0
+        ],
+        "post_delay": 200
+    },
+    "Exit": {}
+}

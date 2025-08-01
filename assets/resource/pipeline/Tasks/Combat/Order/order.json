@@ -1,0 +1,60 @@
+{
+    "Order": {
+        "recognition": "OCR",
+        "expected": "战斗速度",
+        "next": [
+            "NoblePhantasm",
+            "CommandCards"
+        ],
+        "interrupt": []
+    },
+    "OrderFlagMiss": {
+        "doc": "战斗速度",
+        "recognition": "OCR",
+        "expected": "战斗速度",
+        "inverse": true,
+        "roi": [
+            1080,
+            70,
+            110,
+            35
+        ]
+    },
+    "NoblePhantasm": {
+        "recognition": "OCR",
+        "expected": [
+            "真圆集结",
+            "石兵八阵",
+            "于彼招手的",
+            "伊吹御灵",
+            "宿愿",
+            "助战"
+        ],
+        "roi": [
+            280,
+            105,
+            1000,
+            255
+        ],
+        "order_by": "Vertical",
+        "action": "Click"
+    },
+    "CommandCards": {
+        "recognition": "OCR",
+        "expected": [
+            "战",
+            "技击",
+            "迅击",
+            "力击"
+        ],
+        "threshold": 0.9,
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "order_by": "Vertical",
+        "action": "Click"
+    }
+}

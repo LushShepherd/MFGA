@@ -1,0 +1,33 @@
+{
+    "FormationFlag": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Formation/FormationFlag.png",
+        "roi": [
+            1038,
+            0,
+            242,
+            86
+        ],
+        "next": [
+            "StartTask",
+            "Exit"
+        ],
+        "interrupt": []
+    },
+    "StartTask": {
+        "recognition": "OCR",
+        "expected": [
+            "开始任务",
+            "战斗开始"
+        ],
+        "roi": [
+            1102,
+            649,
+            252,
+            84
+        ],
+        "action": "Click",
+        "next": [],
+        "interrupt": []
+    }
+}

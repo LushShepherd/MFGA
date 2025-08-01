@@ -1,0 +1,178 @@
+{
+    "Friendship": {
+        "next": [
+            "GrandSummoa"
+        ],
+        "interrupt": [
+            "Menu",
+            "ReturnMain"
+        ]
+    },
+    "AnotherSummoa": {
+        "doc": "免费十连后继续（默认禁用）",
+        "enabled": false,
+        "action": "Click",
+        "target": "SummoaResult",
+        "next": [
+            "NoFreeSpace",
+            "SummoaResult"
+        ],
+        "interrupt": [
+            "ConfirmSummoa"
+        ],
+        "on_error": [
+            "ReturnMain"
+        ]
+    },
+    "SummoaResult": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/AnotherSummoa.png",
+        "roi": [
+            644,
+            640,
+            237,
+            64
+        ],
+        "next": [
+            "AnotherSummoa",
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "BackButton"
+        ]
+    },
+    "NoFreeSpace": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/NoFreeSpace.png",
+        "roi": [
+            505,
+            530,
+            269,
+            70
+        ],
+        "next": [
+            "ReturnMain"
+        ]
+    },
+    "Summoa": {
+        "post_delay": 1000,
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/AnotherSummoa.png",
+        "roi": [
+            646,
+            642,
+            233,
+            62
+        ],
+        "inverse": true,
+        "action": "Click",
+        "target": [
+            646,
+            642,
+            233,
+            62
+        ]
+    },
+    "ConfirmSummoa": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/ConfirmSummoa.png",
+        "roi": [
+            799,
+            546,
+            76,
+            39
+        ],
+        "post_delay": 1000,
+        "action": "Click",
+        "next": [
+            "NoFreeSpace",
+            "SummoaResult"
+        ],
+        "interrupt": [
+            "Summoa"
+        ]
+    },
+    "FreeSummoa": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/FreeSummoa.png",
+        "roi": [
+            534,
+            477,
+            209,
+            82
+        ],
+        "action": "Click"
+    },
+    "UnfreeSummoa": {
+        "doc": "付费十连（默认禁用）",
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/UnfreeSummoa.png",
+        "roi": [
+            775,
+            478,
+            208,
+            80
+        ],
+        "action": "Click"
+    },
+    "FriendshipSummoa": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/FriendshipSummoa.png",
+        "roi": [
+            419,
+            636,
+            106,
+            42
+        ],
+        "action": "Click"
+    },
+    "GrandSummoa_old": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/GrandSummoa.png",
+        "roi": [
+            598,
+            575,
+            83,
+            50
+        ],
+        "action": "Click"
+    },
+    "GrandSummoa": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/GrandSummoa.png",
+        "roi": [
+            598,
+            575,
+            83,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "NoFreeSpace",
+            "ConfirmSummoa",
+            "SummoaResult"
+        ],
+        "interrupt": [
+            "FreeSummoa",
+            "UnfreeSummoa",
+            "FriendshipSummoa",
+            "GrandSummoa"
+        ],
+        "timeout": 6000,
+        "on_error": [
+            "ReturnMain"
+        ]
+    },
+    "Menu": {
+        "recognition": "TemplateMatch",
+        "template": "GrandSummoa/Menu.png",
+        "roi": [
+            1143,
+            634,
+            84,
+            37
+        ],
+        "action": "Click"
+    }
+}

@@ -54,7 +54,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        os: [win, macos, linux, android]
+        os: [win, macos, linux]
         arch: [aarch64, x86_64]
       fail-fast: false
 
@@ -108,35 +108,27 @@ jobs:
             echo "Skipping copy MFA for Android."
           fi
 
+      - name: Custom Actions For Windows
+        if: matrix.os == 'win'
+        shell: bash
+        run: |
+          mv ./install/MFAAvalonia.exe ./install/MFGA.exe
+
+      - name: Custom Actions For macOS and Linux
+        if: matrix.os == 'macos' || matrix.os == 'linux'
+        shell: bash
+        run: |
+          mv ./install/MFAAvalonia ./install/MFGA
+
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
+          name: MFGA-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
-  changelog:
-    name: Generate changelog
-    runs-on: ubuntu-latest
-    outputs:
-      release_body: ${{ steps.git-cliff.outputs.content }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Generate a changelog
-        uses: orhun/git-cliff-action@v4
-        id: git-cliff
-        with:
-          config: .github/cliff.toml
-          args: -vv --latest --strip header
-        env:
-          OUTPUT: CHANGES.md
-          GITHUB_REPO: ${{ github.repository }}
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [install, changelog]
+    needs: [meta, install]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
