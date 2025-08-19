@@ -6,7 +6,6 @@
         "interrupt": [
             "Skill",
             "Order",
-            "StatesData",
             "Result",
             "NextStep",
             "AssistantFormation",

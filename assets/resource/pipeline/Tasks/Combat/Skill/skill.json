@@ -27,7 +27,6 @@
         ],
         "expected": "生命",
         "next": [
-            "StatesData",
             "SkillTarget3",
             "NPFull1",
             "NPFull2",
@@ -51,7 +50,6 @@
         ],
         "expected": "生命",
         "next": [
-            "StatesData",
             "SkillTarget3",
             "NPFull1",
             "NPFull2",
@@ -74,7 +72,6 @@
         ],
         "expected": "生命",
         "next": [
-            "StatesData",
             "SkillTarget3",
             "NPFull1",
             "NPFull2",
@@ -141,13 +138,60 @@
             126,
             79
         ],
-        "post_delay": 1000,
+        "post_delay": 2500,
         "action": "Click",
         "next": [
             "Exit"
         ]
     },
-    "StatesData": {
+    "StatesData1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Combat/Skill/StatesData.png"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1205,
+                    605,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "Servant2",
+            "Servant3",
+            "NextPhase"
+        ]
+    },
+    "StatesData2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Combat/Skill/StatesData.png"
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1205,
+                    605,
+                    0,
+                    0
+                ]
+            }
+        },
+        "next": [
+            "Servant3",
+            "NextPhase"
+        ]
+    },
+    "StatesData3": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -253,7 +297,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": {
             "type": "Click",
@@ -267,6 +311,7 @@
             }
         },
         "next": [
+            "StatesData1",
             "Servant1"
         ]
     },
@@ -288,7 +333,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -298,6 +343,7 @@
             3
         ],
         "next": [
+            "StatesData1",
             "Servant1"
         ]
     },
@@ -319,7 +365,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -329,6 +375,7 @@
             3
         ],
         "next": [
+            "StatesData1",
             "Servant1"
         ]
     },
@@ -350,7 +397,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -360,6 +407,7 @@
             3
         ],
         "next": [
+            "StatesData2",
             "Servant2"
         ]
     },
@@ -381,7 +429,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -391,6 +439,7 @@
             3
         ],
         "next": [
+            "StatesData2",
             "Servant2"
         ]
     },
@@ -412,7 +461,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -422,6 +471,7 @@
             3
         ],
         "next": [
+            "StatesData2",
             "Servant2"
         ]
     },
@@ -443,7 +493,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -453,6 +503,7 @@
             3
         ],
         "next": [
+            "StatesData3",
             "Servant3"
         ]
     },
@@ -474,7 +525,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -484,6 +535,7 @@
             3
         ],
         "next": [
+            "StatesData3",
             "Servant3"
         ]
     },
@@ -505,7 +557,7 @@
                 "green_mask": true
             }
         },
-        "post_delay": 1000,
+        "post_delay": 2500,
         "inverse": true,
         "action": "Click",
         "target": [
@@ -515,6 +567,7 @@
             3
         ],
         "next": [
+            "StatesData3",
             "Servant3"
         ]
     }
