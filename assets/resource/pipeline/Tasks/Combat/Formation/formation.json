@@ -9,10 +9,62 @@
             86
         ],
         "next": [
+            "TeamOrder",
+            "Confirmation",
+            "AutoFormation",
             "StartTask",
             "Exit"
+        ]
+    },
+    "AutoFormation": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Formation/AutoFormation.png",
+        "index": -1,
+        "action": "Click",
+        "next": [
+            "ConfirmAutoFormation"
+        ]
+    },
+    "ConfirmAutoFormation": {
+        "recognition": "OCR",
+        "expected": [
+            "决定"
         ],
-        "interrupt": []
+        "order_by": "Horizontal",
+        "index": -1,
+        "action": "Click",
+        "post_delay": 1000
+    },
+    "TeamOrder": {
+        "doc": "编队roi在interface中",
+        "recognition": "ColorMatch",
+        "method": 4,
+        "lower": [
+            105,
+            105,
+            105
+        ],
+        "upper": [
+            106,
+            106,
+            106
+        ],
+        "roi": [
+            465,
+            47,
+            1,
+            1
+        ],
+        "action": "Click",
+        "target": [
+            465,
+            47,
+            0,
+            0
+        ],
+        "next": [
+            "FormationFlag"
+        ]
     },
     "StartTask": {
         "recognition": "OCR",

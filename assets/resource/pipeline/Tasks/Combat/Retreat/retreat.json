@@ -3,6 +3,7 @@
         "recognition": "TemplateMatch",
         "template": "Combat/Retreat/Continue.png",
         "next": [
+            "CloseFGO",
             "HomeFlag"
         ],
         "interrupt": [
@@ -26,17 +27,6 @@
             323,
             78,
             92
-        ],
-        "action": "Click"
-    },
-    "Confirmation": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/Retreat/Confirmation.png",
-        "roi": [
-            601,
-            543,
-            78,
-            39
         ],
         "action": "Click"
     }

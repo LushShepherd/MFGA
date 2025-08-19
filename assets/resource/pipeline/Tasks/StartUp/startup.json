@@ -1,14 +1,11 @@
 {
     "StartUp": {
-        "post_wait_freezes": 300,
+        "doc": "其实是重启FGO",
         "next": [
             "ServerMaintenance",
-            "HomeFlag",
-            "StartGame"
+            "HomeFlag"
         ],
         "interrupt": [
-            "HomeButton",
-            "BackButton",
             "CloseAnnouncement",
             "LoginReward",
             "GameLaunch",
@@ -22,8 +19,21 @@
             "FGOLogo",
             "AndroidNotification",
             "GameNotification",
+            "StartGame",
             "StartFGO"
         ]
+    },
+    "StartGame": {
+        "doc": "8",
+        "recognition": "TemplateMatch",
+        "template": "StartUp/StartGame.png",
+        "roi": [
+            133,
+            75,
+            1018,
+            447
+        ],
+        "action": "Click"
     },
     "ServerMaintenance": {
         "recognition": "TemplateMatch",
@@ -48,23 +58,6 @@
             514
         ]
     },
-    "ReturnMain": {
-        "doc": "返回主界面（专供任务开始前使用）",
-        "next": [
-            "HomeFlagCloseReturnMain"
-        ],
-        "interrupt": [
-            "HomeButton",
-            "BackButton",
-            "CloseAnnouncement",
-            "LoginReward",
-            "NextStep",
-            "Story"
-        ],
-        "on_error": [
-            "SwipeTop"
-        ]
-    },
     "SwipeTop": {
         "action": "Click",
         "target": [
@@ -75,53 +68,6 @@
         ],
         "next": [
             "ReturnMain"
-        ]
-    },
-    "HomeFlagCloseReturnMain": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/HomeFlag.png",
-        "roi": [
-            668,
-            95,
-            526,
-            514
-        ],
-        "next": []
-    },
-    "HomeFlagCloseReturnMain_old": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/HomeFlag.png",
-        "roi": [
-            668,
-            95,
-            526,
-            514
-        ],
-        "next": [
-            "Combat"
-        ]
-    },
-    "StartGame": {
-        "doc": "8",
-        "recognition": "TemplateMatch",
-        "template": "StartUp/StartGame.png",
-        "roi": [
-            133,
-            75,
-            1018,
-            447
-        ],
-        "action": "Click",
-        "next": [
-            "HomeFlag",
-            "StartGame"
-        ],
-        "interrupt": [
-            "HomeButton",
-            "BackButton",
-            "CloseAnnouncement",
-            "LoginReward",
-            "GameNotification"
         ]
     },
     "GameNotification": {
@@ -137,58 +83,15 @@
         ],
         "action": "Click"
     },
-    "LoginReward": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "StartUp/LoginReward.png"
-        ],
-        "action": "Click"
-    },
-    "HomeButton": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "StartUp/HomeButton.png"
-        ],
-        "roi": [
-            25,
-            25,
-            32,
-            32
-        ],
-        "action": "Click"
-    },
-    "BackButton": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "StartUp/BackButton.png"
-        ],
-        "roi": [
-            25,
-            25,
-            113,
-            36
-        ],
-        "action": "Click"
-    },
-    "CloseAnnouncement": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "StartUp/CloseAnnouncement.png"
-        ],
-        "roi": [
-            1215,
-            4,
-            60,
-            60
-        ],
-        "action": "Click"
-    },
     "Abort": {
         "recognition": "OCR",
         "expected": [
             "不进入",
-            "不继续"
+            "不继续",
+            "关闭"
         ],
+        "order_by": "Vertical",
+        "index": -1,
         "roi": [
             295,
             532,
@@ -218,8 +121,7 @@
             673,
             84,
             32
-        ],
-        "post_wait_freezes": 300
+        ]
     },
     "DataUpdate": {
         "doc": "5",
@@ -231,8 +133,7 @@
             202,
             36
         ],
-        "action": "Click",
-        "post_wait_freezes": 300
+        "action": "Click"
     },
     "Servant": {
         "doc": "4,6",
@@ -243,8 +144,7 @@
             27,
             98,
             40
-        ],
-        "post_wait_freezes": 300
+        ]
     },
     "Disclaimer": {
         "doc": "5",
@@ -255,8 +155,7 @@
             148,
             253,
             45
-        ],
-        "post_wait_freezes": 1000
+        ]
     },
     "GameLaunch": {
         "doc": "7",
@@ -290,8 +189,7 @@
             240,
             239,
             239
-        ],
-        "post_wait_freezes": 300
+        ]
     },
     "AndroidNotification": {
         "doc": "申请android通知权限",

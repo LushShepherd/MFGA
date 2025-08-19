@@ -1,0 +1,99 @@
+{
+    "NoblePhantasm": {
+        "doc": "宝具未被选择过",
+        "recognition": "OCR",
+        "expected": [
+            "行动一",
+            "行动二",
+            "行动三"
+        ],
+        "inverse": true,
+        "roi": [
+            295,
+            95,
+            705,
+            225
+        ],
+        "next": [
+            "NoblePhantasm1",
+            "NoblePhantasm3",
+            "NoblePhantasm2",
+            "CommandCards"
+        ]
+    },
+    "NoblePhantasm1": {
+        "recognition": "OCR",
+        "expected": [
+            "宝具封印",
+            "行动"
+        ],
+        "inverse": true,
+        "roi": [
+            295,
+            95,
+            235,
+            225
+        ],
+        "action": "Click",
+        "target": [
+            405,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "NoblePhantasm3",
+            "NoblePhantasm2",
+            "CommandCards"
+        ]
+    },
+    "NoblePhantasm2": {
+        "recognition": "OCR",
+        "expected": [
+            "宝具封印",
+            "行动"
+        ],
+        "inverse": true,
+        "roi": [
+            530,
+            210,
+            235,
+            225
+        ],
+        "action": "Click",
+        "target": [
+            640,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "CommandCards"
+        ]
+    },
+    "NoblePhantasm3": {
+        "recognition": "OCR",
+        "expected": [
+            "宝具封印",
+            "行动"
+        ],
+        "inverse": true,
+        "roi": [
+            765,
+            210,
+            235,
+            225
+        ],
+        "action": "Click",
+        "target": [
+            875,
+            210,
+            0,
+            0
+        ],
+        "next": [
+            "NoblePhantasm2",
+            "CommandCards"
+        ]
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "ReturnMain": {
+        "doc": "返回主界面",
+        "next": [
+            "HomeFlagCloseReturnMain"
+        ],
+        "interrupt": [
+            "HomeButton",
+            "BackButton",
+            "CloseAnnouncement",
+            "LoginReward",
+            "NextStep",
+            "Story"
+        ],
+        "on_error": [
+            "SwipeTop"
+        ]
+    },
+    "HomeFlagCloseReturnMain": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/HomeFlag.png",
+        "roi": [
+            668,
+            95,
+            526,
+            514
+        ],
+        "action": "Swipe",
+        "begin": [
+            1000,
+            512,
+            5,
+            5
+        ],
+        "end": [
+            1000,
+            128,
+            5,
+            5
+        ],
+        "duration": 1024
+    },
+    "HomeButton": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/HomeButton.png"
+        ],
+        "roi": [
+            25,
+            25,
+            32,
+            32
+        ],
+        "action": "Click"
+    },
+    "BackButton": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/BackButton.png"
+        ],
+        "roi": [
+            25,
+            25,
+            113,
+            36
+        ],
+        "action": "Click"
+    },
+    "CloseAnnouncement": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/CloseAnnouncement.png"
+        ],
+        "roi": [
+            1215,
+            4,
+            60,
+            60
+        ],
+        "action": "Click"
+    },
+    "LoginReward": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/LoginReward.png"
+        ],
+        "action": "Click"
+    }
+}

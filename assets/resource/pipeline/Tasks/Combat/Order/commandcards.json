@@ -1,0 +1,158 @@
+{
+    "CommandCards": {
+        "doc": "指令卡顺序:AAA>AAX>AQB>AXX>XXX",
+        "next": [
+            "CommandCards_1_Arts",
+            "CommandCards_1_Quick",
+            "CommandCards_1_Buster",
+            "Exit"
+        ]
+    },
+    "CommandCards_1_Quick": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/quick.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click",
+        "next": [
+            "CommandCards_2_Quick",
+            "CommandCards_2_Buster",
+            "Exit"
+        ]
+    },
+    "CommandCards_1_Arts": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/arts.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click",
+        "next": [
+            "CommandCards_2_Arts",
+            "CommandCards_2_Quick",
+            "CommandCards_2_Buster",
+            "Exit"
+        ]
+    },
+    "CommandCards_1_Buster": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/buster.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click",
+        "next": [
+            "CommandCards_2_Buster",
+            "Exit"
+        ]
+    },
+    "CommandCards_2_Quick": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/quick.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click",
+        "next": [
+            "CommandCards_3_Buster",
+            "CommandCards_3_Quick",
+            "Exit"
+        ]
+    },
+    "CommandCards_2_Arts": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/arts.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click",
+        "next": [
+            "CommandCards_3_Arts",
+            "CommandCards_3_Quick",
+            "CommandCards_3_Buster",
+            "Exit"
+        ]
+    },
+    "CommandCards_2_Buster": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/buster.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click",
+        "next": [
+            "CommandCards_3_Buster",
+            "Exit"
+        ]
+    },
+    "CommandCards_3_Quick": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/quick.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click"
+    },
+    "CommandCards_3_Arts": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/arts.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click"
+    },
+    "CommandCards_3_Buster": {
+        "recognition": "TemplateMatch",
+        "template": "CommandCards/buster.png",
+        "roi": [
+            50,
+            405,
+            1230,
+            215
+        ],
+        "threshold": 0.9,
+        "order_by": "Vertical",
+        "action": "Click"
+    }
+}

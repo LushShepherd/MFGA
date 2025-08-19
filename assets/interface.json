@@ -20,15 +20,21 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "StartUp"
+            "entry": "CloseFGO",
+            "pipeline_override": {
+                "CloseFGO": {
+                    "next": [
+                        "StartUp"
+                    ]
+                }
+            }
         },
         {
             "name": "友情池抽卡",
             "entry": "Friendship",
             "option": [
                 "FriendshipSummoa"
-            ],
-            "pipeline_override": {}
+            ]
         },
         {
             "name": "合成青铜果实",
@@ -36,7 +42,36 @@
         },
         {
             "name": "主线推图",
-            "entry": "Combat"
+            "entry": "Combat",
+            "option": [
+                "Team"
+            ],
+            "pipeline_override": {
+                "HomeFlag": {
+                    "action": "Swipe",
+                    "begin": [
+                        1000,
+                        416,
+                        5,
+                        5
+                    ],
+                    "end": [
+                        1037,
+                        214,
+                        5,
+                        5
+                    ],
+                    "duration": 1024,
+                    "next": [
+                        "Combat"
+                    ]
+                },
+                "HomeFlagCloseReturnMain": {
+                    "next": [
+                        "Combat"
+                    ]
+                }
+            }
         },
         {
             "name": "关闭游戏",
@@ -45,6 +80,7 @@
     ],
     "option": {
         "FriendshipSummoa": {
+            "default_case": "免费十连",
             "cases": [
                 {
                     "name": "免费十连",
@@ -58,6 +94,196 @@
                         },
                         "UnfreeSummoa": {
                             "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "Team": {
+            "cases": [
+                {
+                    "name": "编队1",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "编队2",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                489,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队3",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                514,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队4",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                540,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队5",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                564,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队6",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                589,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队7",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                614,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队8",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                640,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队9",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                664,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队10",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                689,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队11",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                714,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队12",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                740,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队13",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                764,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队14",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                789,
+                                47,
+                                0,
+                                0
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "编队15",
+                    "pipeline_override": {
+                        "TeamOrder": {
+                            "roi": [
+                                814,
+                                47,
+                                0,
+                                0
+                            ]
                         }
                     }
                 }
