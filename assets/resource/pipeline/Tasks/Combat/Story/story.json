@@ -8,6 +8,7 @@
             157,
             73
         ],
+        "post_delay": 2000,
         "next": [
             "StoryOption",
             "Skip",

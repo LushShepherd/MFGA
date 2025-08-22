@@ -17,6 +17,7 @@
             "Tips",
             "AutoFormation",
             "SkillTarget3",
+            "ConfirmSection",
             "HomeFlag"
         ],
         "timeout": 120000,
@@ -114,9 +115,7 @@
         ],
         "action": "Click",
         "next_doc": "Set in code.",
-        "next": [
-            "ConfirmSection"
-        ],
+        "next": [],
         "timeout": 2000,
         "interrupt": [],
         "on_error": [

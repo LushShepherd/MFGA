@@ -16,8 +16,8 @@
         ],
         "next": [
             "NoblePhantasm1",
-            "NoblePhantasm3",
             "NoblePhantasm2",
+            "NoblePhantasm3",
             "CommandCards"
         ]
     },
@@ -42,8 +42,8 @@
             0
         ],
         "next": [
-            "NoblePhantasm3",
             "NoblePhantasm2",
+            "NoblePhantasm3",
             "CommandCards"
         ]
     },
@@ -68,6 +68,7 @@
             0
         ],
         "next": [
+            "NoblePhantasm3",
             "CommandCards"
         ]
     },
@@ -92,7 +93,6 @@
             0
         ],
         "next": [
-            "NoblePhantasm2",
             "CommandCards"
         ]
     }
