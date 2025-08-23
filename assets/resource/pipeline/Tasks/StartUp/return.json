@@ -77,7 +77,8 @@
             60,
             60
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 2000
     },
     "LoginReward": {
         "recognition": "TemplateMatch",
