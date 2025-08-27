@@ -45,8 +45,7 @@
             "Skill1-3",
             "Servant2",
             "Servant3",
-            "NextPhase",
-            "Exit"
+            "NextPhase"
         ]
     },
     "Servant2": {
@@ -73,8 +72,7 @@
             "Skill2-2",
             "Skill2-3",
             "Servant3",
-            "NextPhase",
-            "Exit"
+            "NextPhase"
         ]
     },
     "Servant3": {
@@ -100,9 +98,9 @@
             "Skill3-1",
             "Skill3-2",
             "Skill3-3",
-            "NextPhase",
-            "Exit"
-        ]
+            "NextPhase"
+        ],
+        "interrupt": []
     },
     "NPFull1": {
         "doc": "end",
@@ -115,8 +113,7 @@
             23
         ],
         "next": [
-            "NextPhase",
-            "Exit"
+            "NextPhase"
         ]
     },
     "NPFull2": {
@@ -130,8 +127,7 @@
             23
         ],
         "next": [
-            "NextPhase",
-            "Exit"
+            "NextPhase"
         ]
     },
     "NPFull3": {
@@ -145,8 +141,7 @@
             23
         ],
         "next": [
-            "NextPhase",
-            "Exit"
+            "NextPhase"
         ]
     },
     "NextPhase": {
@@ -160,10 +155,7 @@
             120
         ],
         "post_delay": 2500,
-        "action": "Click",
-        "next": [
-            "Exit"
-        ]
+        "action": "Click"
     },
     "StatesData1": {
         "recognition": {
@@ -255,7 +247,7 @@
             "SkillTarget2",
             "SkillTarget1",
             "NPFull3",
-            "Exit"
+            "Skill"
         ]
     },
     "SkillTarget2": {
@@ -278,7 +270,7 @@
         "next": [
             "SkillTarget1",
             "NPFull2",
-            "Exit"
+            "Skill"
         ]
     },
     "SkillTarget1": {
@@ -300,7 +292,7 @@
         ],
         "next": [
             "NPFull1",
-            "Exit"
+            "Skill"
         ]
     },
     "Skill1-1": {

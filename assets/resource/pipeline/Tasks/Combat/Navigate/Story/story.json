@@ -6,15 +6,13 @@
                 "template": [
                     "Combat/Story/Skip.png"
                 ],
-                "threshold": [
-                    0.7
-                ],
                 "roi": [
-                    1122,
-                    9,
-                    150,
-                    61
-                ]
+                    1100,
+                    5,
+                    180,
+                    70
+                ],
+                "green_mask": true
             }
         },
         "next": [
@@ -46,15 +44,13 @@
                 "template": [
                     "Combat/Story/Skip.png"
                 ],
-                "threshold": [
-                    0.7
-                ],
                 "roi": [
                     1122,
                     9,
                     150,
                     61
-                ]
+                ],
+                "green_mask": true
             }
         },
         "action": "Click",
@@ -70,7 +66,7 @@
             "Combat/Story/Yes.png"
         ],
         "threshold": [
-            0.7
+            0.9
         ],
         "action": "Click"
     }

@@ -20,7 +20,7 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "CloseFGO",
+            "entry": "StartUp",
             "pipeline_override": {
                 "CloseFGO": {
                     "next": [

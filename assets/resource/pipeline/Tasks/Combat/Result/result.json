@@ -23,6 +23,12 @@
             "Combat/ClickScreen.png",
             "StartUp/ConfirmClose.png"
         ],
+        "threshold": [
+            0.9,
+            0.7,
+            0.8,
+            0.8
+        ],
         "green_mask": true,
         "action": "Click"
     }

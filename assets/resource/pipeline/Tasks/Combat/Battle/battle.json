@@ -9,13 +9,11 @@
             "Combat/Tips.png"
         ],
         "next": [
-            "NextStep",
-            "Retreat"
-        ],
-        "interrupt": [
             "Skill",
             "Order",
-            "Tips"
+            "NextStep",
+            "Tips",
+            "Retreat"
         ],
         "on_error": [
             "Exit"
