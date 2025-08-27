@@ -2,5 +2,8 @@
     "CloseFGO": {
         "action": "StopApp",
         "package": "com.bilibili.fatego"
+    },
+    "StopTask": {
+        "action": "StopTask"
     }
 }

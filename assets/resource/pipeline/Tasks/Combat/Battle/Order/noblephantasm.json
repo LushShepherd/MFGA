@@ -1,11 +1,14 @@
 {
     "NoblePhantasm": {
         "doc": "宝具未被选择过",
-        "recognition": "OCR",
-        "expected": [
-            "行动一",
-            "行动二",
-            "行动三"
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/FirstAction.png",
+            "Combat/SecondAction.png"
+        ],
+        "threshold": [
+            0.6,
+            0.6
         ],
         "inverse": true,
         "roi": [

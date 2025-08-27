@@ -1,0 +1,34 @@
+{
+    "Battle": {
+        "doc": "战斗界面",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Skill/NextPhase.png",
+            "Combat/BattleReturn.png",
+            "Combat/Skill/StatesData.png",
+            "Combat/Tips.png"
+        ],
+        "next": [
+            "NextStep",
+            "Retreat"
+        ],
+        "interrupt": [
+            "Skill",
+            "Order",
+            "Tips"
+        ],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "Tips": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Tips.png",
+        "roi": [
+            565,
+            173,
+            0,
+            0
+        ]
+    }
+}

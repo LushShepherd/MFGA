@@ -1,0 +1,29 @@
+{
+    "Result": {
+        "doc": "-1",
+        "recognition": "OCR",
+        "expected": [
+            "关闭",
+            "点击屏幕",
+            "下一步"
+        ],
+        "roi": [
+            0,
+            360,
+            1280,
+            360
+        ],
+        "action": "Click"
+    },
+    "NextStep": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/NextStep.png",
+            "Combat/PleaseClick.png",
+            "Combat/ClickScreen.png",
+            "StartUp/ConfirmClose.png"
+        ],
+        "green_mask": true,
+        "action": "Click"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "EnterTheChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/NextOne.png",
+        "green_mask": true,
+        "roi": [
+            708,
+            91,
+            447,
+            629
+        ],
+        "threshold": [
+            0.9
+        ],
+        "target_offset": [
+            0,
+            60,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next_doc": "Set in code.",
+        "next": [],
+        "interrupt": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "EnterTheStage": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/NextOne.png",
+        "green_mask": true,
+        "roi": [
+            0,
+            0,
+            1280,
+            600
+        ],
+        "threshold": 0.9,
+        "target_offset": [
+            0,
+            120,
+            0,
+            20
+        ],
+        "action": "Click",
+        "next_doc": "Set in code.",
+        "post_delay": 2000,
+        "next": [],
+        "interrupt": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "EnterTheSection": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/NextOne.png",
+        "green_mask": true,
+        "roi": [
+            645,
+            95,
+            108,
+            76
+        ],
+        "threshold": [
+            0.9
+        ],
+        "action": "Click",
+        "next_doc": "Set in code.",
+        "next": [],
+        "timeout": 2000,
+        "interrupt": [],
+        "on_error": [
+            "Exit"
+        ]
+    },
+    "ConfirmSection": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "action": "Click",
+        "order_by": "Horizontal",
+        "index": -1,
+        "next": [],
+        "interrupt": []
+    }
+}

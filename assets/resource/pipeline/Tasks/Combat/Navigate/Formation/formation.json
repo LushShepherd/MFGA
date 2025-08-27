@@ -19,6 +19,12 @@
     "AutoFormation": {
         "recognition": "TemplateMatch",
         "template": "Combat/Formation/AutoFormation.png",
+        "roi": [
+            864,
+            584,
+            131,
+            38
+        ],
         "index": -1,
         "action": "Click",
         "next": [
@@ -67,19 +73,21 @@
         ]
     },
     "StartTask": {
-        "recognition": "OCR",
-        "expected": [
-            "开始任务",
-            "战斗开始"
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Formation/TaskStart.png",
+            "Combat/Formation/StartTask.png"
         ],
         "roi": [
-            1102,
-            649,
-            252,
-            84
+            1100,
+            650,
+            137,
+            44
         ],
-        "action": "Click",
-        "next": [],
-        "interrupt": []
+        "threshold": [
+            0.9,
+            0.6
+        ],
+        "action": "Click"
     }
 }

@@ -84,19 +84,22 @@
         "action": "Click"
     },
     "Abort": {
-        "recognition": "OCR",
-        "expected": [
-            "不进入",
-            "不继续",
-            "关闭"
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/ConfirmClose.png",
+            "StartUp/ConfirmNotContinue.png"
+        ],
+        "threshold": [
+            0.8,
+            0.8
         ],
         "order_by": "Vertical",
         "index": -1,
         "roi": [
-            295,
-            532,
-            205,
-            49
+            0,
+            360,
+            1280,
+            360
         ],
         "action": "Click"
     },
@@ -114,13 +117,14 @@
     },
     "Connecting": {
         "doc": "3",
-        "recognition": "OCR",
-        "expected": "连接中",
-        "roi": [
-            925,
-            673,
-            84,
-            32
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/OnLoading.png",
+            "StartUp/OnConnecting.png"
+        ],
+        "threshold": [
+            0.8,
+            0.8
         ]
     },
     "DataUpdate": {

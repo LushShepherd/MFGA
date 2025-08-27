@@ -1,0 +1,77 @@
+{
+    "Story": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "Combat/Story/Skip.png"
+                ],
+                "threshold": [
+                    0.7
+                ],
+                "roi": [
+                    1122,
+                    9,
+                    150,
+                    61
+                ]
+            }
+        },
+        "next": [
+            "StoryOption",
+            "Skip"
+        ],
+        "interrupt": [],
+        "on_error": []
+    },
+    "StoryOption": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Story/StoryOption.png",
+        "roi": [
+            150,
+            160,
+            982,
+            226
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "Skip"
+        ]
+    },
+    "Skip": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "Combat/Story/Skip.png"
+                ],
+                "threshold": [
+                    0.7
+                ],
+                "roi": [
+                    1122,
+                    9,
+                    150,
+                    61
+                ]
+            }
+        },
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Yes",
+            "Exit"
+        ]
+    },
+    "Yes": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Story/Yes.png"
+        ],
+        "threshold": [
+            0.7
+        ],
+        "action": "Click"
+    }
+}

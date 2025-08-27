@@ -1,0 +1,16 @@
+{
+    "Order": {
+        "doc": "指令卡界面",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/BattleReturn.png"
+        ],
+        "threshold": [
+            0.9
+        ],
+        "next": [
+            "NoblePhantasm",
+            "CommandCards"
+        ]
+    }
+}

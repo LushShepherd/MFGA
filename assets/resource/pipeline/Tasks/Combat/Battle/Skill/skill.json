@@ -4,12 +4,15 @@
         "recognition": "TemplateMatch",
         "template": "Combat/Skill/NextPhase.png",
         "roi": [
-            1070,
-            567,
-            126,
-            79
+            1000,
+            600,
+            280,
+            120
         ],
         "next": [
+            "NPFull1",
+            "NPFull2",
+            "NPFull3",
             "Servant1",
             "Servant2",
             "Servant3",
@@ -18,14 +21,20 @@
         ]
     },
     "Servant1": {
-        "recognition": "OCR",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Skill/HP.png"
+        ],
+        "green_mask": true,
+        "threshold": [
+            0.9
+        ],
         "roi": [
             108,
             635,
             32,
             21
         ],
-        "expected": "生命",
         "next": [
             "SkillTarget3",
             "NPFull1",
@@ -41,14 +50,20 @@
         ]
     },
     "Servant2": {
-        "recognition": "OCR",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Skill/HP.png"
+        ],
+        "green_mask": true,
+        "threshold": [
+            0.9
+        ],
         "roi": [
             426,
             635,
             33,
             21
         ],
-        "expected": "生命",
         "next": [
             "SkillTarget3",
             "NPFull1",
@@ -63,14 +78,20 @@
         ]
     },
     "Servant3": {
-        "recognition": "OCR",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Skill/HP.png"
+        ],
+        "green_mask": true,
+        "threshold": [
+            0.9
+        ],
         "roi": [
             744,
             635,
             33,
             21
         ],
-        "expected": "生命",
         "next": [
             "SkillTarget3",
             "NPFull1",
@@ -133,10 +154,10 @@
         "recognition": "TemplateMatch",
         "template": "Combat/Skill/NextPhase.png",
         "roi": [
-            1070,
-            567,
-            126,
-            79
+            1000,
+            600,
+            280,
+            120
         ],
         "post_delay": 2500,
         "action": "Click",
@@ -233,6 +254,7 @@
         "next": [
             "SkillTarget2",
             "SkillTarget1",
+            "NPFull3",
             "Exit"
         ]
     },
@@ -255,6 +277,7 @@
         ],
         "next": [
             "SkillTarget1",
+            "NPFull2",
             "Exit"
         ]
     },
@@ -276,6 +299,7 @@
             0
         ],
         "next": [
+            "NPFull1",
             "Exit"
         ]
     },

@@ -1,11 +1,9 @@
 {
     "Confirmation": {
         "doc": "-1",
-        "recognition": "OCR",
-        "order_by": "Vertical",
-        "index": -1,
-        "expected": [
-            "关闭"
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Retreat/Confirmation.png"
         ],
         "action": "Click"
     }
