@@ -4,13 +4,8 @@
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "Combat/Story/Skip.png"
-                ],
-                "roi": [
-                    1100,
-                    5,
-                    180,
-                    70
+                    "Combat/Story/Skip.png",
+                    "Combat/Story/StoryOption.png"
                 ],
                 "green_mask": true
             }

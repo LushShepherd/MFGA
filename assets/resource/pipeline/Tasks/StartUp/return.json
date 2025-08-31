@@ -2,7 +2,7 @@
     "ReturnMain": {
         "doc": "返回主界面",
         "next": [
-            "HomeFlagCloseReturnMain"
+            "HomeFlag"
         ],
         "interrupt": [
             "HomeButton",
@@ -15,30 +15,6 @@
         "on_error": [
             "SwipeTop"
         ]
-    },
-    "HomeFlagCloseReturnMain": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/HomeFlag.png",
-        "roi": [
-            668,
-            95,
-            526,
-            514
-        ],
-        "action": "Swipe",
-        "begin": [
-            1000,
-            512,
-            5,
-            5
-        ],
-        "end": [
-            1000,
-            128,
-            5,
-            5
-        ],
-        "duration": 1024
     },
     "HomeButton": {
         "recognition": "TemplateMatch",
@@ -83,7 +59,7 @@
     "LoginReward": {
         "recognition": "TemplateMatch",
         "template": [
-            "StartUp/LoginReward.png"
+            "StartUp/ConfirmClose.png"
         ],
         "action": "Click"
     }

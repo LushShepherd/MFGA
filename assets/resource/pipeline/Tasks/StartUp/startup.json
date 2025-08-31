@@ -50,11 +50,14 @@
     },
     "HomeFlag": {
         "recognition": "TemplateMatch",
-        "template": "StartUp/HomeFlag.png",
+        "template": [
+            "StartUp/HomeFlag.png",
+            "StartUp/ActivityFlag.png"
+        ],
         "roi": [
-            668,
+            655,
             95,
-            526,
+            545,
             514
         ]
     },
