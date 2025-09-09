@@ -44,7 +44,8 @@
             "name": "主线推图",
             "entry": "Combat",
             "option": [
-                "Team"
+                "Team",
+                "Hardness"
             ],
             "pipeline_override": {
                 "HomeFlag": {
@@ -93,6 +94,32 @@
                             "enabled": true
                         },
                         "UnfreeSummoa": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "Hardness": {
+            "cases": [
+                {
+                    "name": "简单",
+                    "pipeline_override": {
+                        "NPFull1": {
+                            "enabled": true
+                        },
+                        "NPFull2": {
+                            "enabled": true
+                        },
+                        "NPFull3": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "困难",
+                    "pipeline_override": {
+                        "NPFull3": {
                             "enabled": true
                         }
                     }

@@ -90,7 +90,8 @@
         "recognition": "TemplateMatch",
         "template": [
             "StartUp/ConfirmClose.png",
-            "StartUp/ConfirmNotContinue.png"
+            "StartUp/ConfirmNotContinue.png",
+            "StartUp/ConfirmNotEnter.png"
         ],
         "threshold": [
             0.8,
