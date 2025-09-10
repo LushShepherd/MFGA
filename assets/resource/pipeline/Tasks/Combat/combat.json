@@ -15,8 +15,7 @@
             "EnterTheSection",
             "EnterTheChapter",
             "EnterTheStage",
-            "HomeFlag",
-            "Exit"
+            "HomeFlag"
         ],
         "timeout": 120000,
         "on_error": [
