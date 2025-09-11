@@ -112,13 +112,13 @@ jobs:
         if: matrix.os == 'win'
         shell: bash
         run: |
-          mv ./install/MFAAvalonia.exe ./install/MFGA.exe
+          mv ./install/MFAAvalonia.exe ./install/MFAAvalonia.exe
 
       - name: Custom Actions For macOS and Linux
         if: matrix.os == 'macos' || matrix.os == 'linux'
         shell: bash
         run: |
-          mv ./install/MFAAvalonia ./install/MFGA
+          mv ./install/MFAAvalonia ./install/MFAAvalonia
 
       - uses: actions/upload-artifact@v4
         with:
