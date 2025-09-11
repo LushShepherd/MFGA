@@ -1,6 +1,7 @@
 {
     "name": "MFGA",
-    "version": "v0.0.1",
+    "version": "v0.0.8",
+    "message": "Make FGO Great Again\n 优化部分逻辑链",
     "url": "https://github.com/LushShepherd/MFGA",
     "custom_title": "MFGA",
     "controller": [
@@ -45,7 +46,8 @@
             "entry": "Combat",
             "option": [
                 "Team",
-                "Hardness"
+                "Hardness",
+                "MainCharacter"
             ],
             "pipeline_override": {
                 "HomeFlag": {
@@ -118,6 +120,30 @@
                 },
                 {
                     "name": "困难",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "MainCharacter": {
+            "cases": [
+                {
+                    "name": "1号位主C",
+                    "pipeline_override": {
+                        "NPFull1": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "2号位主C",
+                    "pipeline_override": {
+                        "NPFull2": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "3号位主C",
                     "pipeline_override": {
                         "NPFull3": {
                             "enabled": true

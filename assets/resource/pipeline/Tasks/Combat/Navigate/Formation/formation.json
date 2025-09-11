@@ -32,9 +32,12 @@
         ]
     },
     "ConfirmAutoFormation": {
-        "recognition": "OCR",
-        "expected": [
-            "决定"
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/Determination.png"
+        ],
+        "threshold": [
+            0.9
         ],
         "order_by": "Horizontal",
         "index": -1,
