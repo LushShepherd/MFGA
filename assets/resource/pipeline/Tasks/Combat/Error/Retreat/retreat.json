@@ -3,7 +3,6 @@
         "recognition": "TemplateMatch",
         "template": "Combat/Retreat/Continue.png",
         "next": [
-            "CloseFGO",
             "HomeFlag"
         ],
         "interrupt": [

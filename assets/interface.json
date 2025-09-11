@@ -150,7 +150,8 @@
                         }
                     }
                 }
-            ]
+            ],
+            "default_case": "3号位主C"
         },
         "Team": {
             "cases": [

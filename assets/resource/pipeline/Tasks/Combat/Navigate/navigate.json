@@ -75,6 +75,7 @@
         ]
     },
     "ConfirmSection": {
+        "enabled": false,
         "recognition": "OCR",
         "expected": "开始",
         "action": "Click",

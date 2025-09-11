@@ -26,9 +26,6 @@
             "Combat/Skill/HP.png"
         ],
         "green_mask": true,
-        "threshold": [
-            0.9
-        ],
         "roi": [
             108,
             635,
@@ -54,9 +51,6 @@
             "Combat/Skill/HP.png"
         ],
         "green_mask": true,
-        "threshold": [
-            0.9
-        ],
         "roi": [
             426,
             635,
@@ -81,9 +75,6 @@
             "Combat/Skill/HP.png"
         ],
         "green_mask": true,
-        "threshold": [
-            0.9
-        ],
         "roi": [
             744,
             635,
